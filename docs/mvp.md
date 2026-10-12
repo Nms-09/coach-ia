@@ -15,3 +15,27 @@ Le coach lui propose un programme de musculation ou de calisthénie adapté, s�
    * Recherche d'exercices adaptés au matériel disponible.
    * Calcul automatique du volume d'entraînement.
    * Conseils nutritionnels simples basés sur les objectifs.
+
+## Critères de réussite
+- RAG : jeu de 30 à 50 questions de test annotées avec les sources attendues ;
+  mesure du taux de retrieval correct et de la fidélité des réponses.
+- Programme : 95 % ou plus de sorties conformes au schéma JSON (Pydantic) ;
+  exercices compatibles avec le matériel déclaré ; volume hebdomadaire par
+  groupe musculaire dans les fourchettes retenues (à documenter).
+- Agent : choix de l'outil correct sur un jeu de scénarios de test.
+
+## Hors périmètre (MVP)
+Estimation de pose vidéo, interface web élaborée, comptes utilisateurs,
+suivi des séances, conseils médicaux ou régimes restrictifs.
+
+## Sources de données
+- Exercices : wger / free-exercise-db (licence à vérifier)
+- Connaissances : articles en accès libre (PubMed Central)
+- Nutrition : Ciqual, Open Food Facts (licences à vérifier)
+
+## Limites
+Le coach donne des informations générales de fitness. Il ne remplace ni un
+médecin ni un diététicien.
+
+## Contraintes techniques
+Développement sur CPU ; fine-tuning sur Colab ou Kaggle.
